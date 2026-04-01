@@ -1,6 +1,6 @@
 # AI for BC Developers — Companion Code & Materials
 
-Code samples, templates, and diagrams from the book **AI pro BC vývojáře** (AI for BC Developers) by Miloš Mikulášek.
+Code samples, templates, and diagrams from the book **Business Central v době AI** (AI for BC Developers) by Miloš Mikulášek.
 
 🇨🇿 [Česká verze README](docs/cs/README.md) | 🇬🇧 English (this file) | 🇩🇪 [Deutsch](docs/de/README.md) | 🇪🇸 [Español](docs/es/README.md)
 

@@ -1,6 +1,6 @@
-# AI pro BC vývojáře — doprovodné materiály
+# Business Central v době AI — doprovodné materiály
 
-Ukázkový kód, šablony a diagramy ke knize **AI pro BC vývojáře** od Miloše Mikuláška.
+Ukázkový kód, šablony a diagramy ke knize **Business Central v době AI** od Miloše Mikuláška.
 
 ## 📁 Struktura
 

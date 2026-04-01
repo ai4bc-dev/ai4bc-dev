@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="860" height="480" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="430" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">AI Adopce v BC Praxi – 90denní Roadmapa</text>
+  <text x="430" y="52" text-anchor="middle" font-size="11" fill="#666">Tři fáze od prvního použití k produkčnímu nasazení</text>
+
+  <!-- Timeline bar -->
+  <rect x="60" y="80" width="740" height="14" rx="7" fill="#e0e0e0"/>
+  <rect x="60" y="80" width="246" height="14" rx="7" fill="#0052cc"/>
+  <rect x="306" y="80" width="248" height="14" fill="#107c10"/>
+  <rect x="554" y="80" width="246" height="14" rx="7" fill="#880e4f"/>
+  <!-- Phase markers -->
+  <circle cx="60" cy="87" r="8" fill="#0052cc"/>
+  <circle cx="306" cy="87" r="8" fill="#107c10"/>
+  <circle cx="554" cy="87" r="8" fill="#880e4f"/>
+  <circle cx="800" cy="87" r="8" fill="#880e4f"/>
+  <text x="60" y="110" text-anchor="middle" font-size="10" fill="#0052cc" font-weight="bold">Den 1</text>
+  <text x="306" y="110" text-anchor="middle" font-size="10" fill="#107c10" font-weight="bold">Den 30</text>
+  <text x="554" y="110" text-anchor="middle" font-size="10" fill="#880e4f" font-weight="bold">Den 60</text>
+  <text x="800" y="110" text-anchor="middle" font-size="10" fill="#880e4f" font-weight="bold">Den 90</text>
+
+  <!-- Phase labels -->
+  <text x="183" y="76" text-anchor="middle" font-size="11" font-weight="bold" fill="#0052cc">FÁZE 1: Základy</text>
+  <text x="430" y="76" text-anchor="middle" font-size="11" font-weight="bold" fill="#107c10">FÁZE 2: Rutina</text>
+  <text x="677" y="76" text-anchor="middle" font-size="11" font-weight="bold" fill="#880e4f">FÁZE 3: Nasazení</text>
+
+  <!-- Phase 1 box -->
+  <rect x="40" y="125" width="246" height="320" rx="10" fill="white" stroke="#0052cc" stroke-width="2"/>
+  <rect x="40" y="125" width="246" height="36" rx="10" fill="#0052cc"/>
+  <rect x="40" y="145" width="246" height="16" fill="#0052cc"/>
+  <text x="163" y="149" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Fáze 1: Základy v praxi</text>
+  <text x="163" y="165" text-anchor="middle" font-size="10" fill="#cce4ff">Týden 1–4</text>
+
+  <text x="56" y="190" font-size="11" font-weight="bold" fill="#0052cc">✓ Nainstalovat nástroje</text>
+  <text x="65" y="207" font-size="10" fill="#333">Claude Code, GitHub Copilot</text>
+  <text x="56" y="228" font-size="11" font-weight="bold" fill="#0052cc">✓ První reálný úkol</text>
+  <text x="65" y="245" font-size="10" fill="#333">Vyřešit jeden skutečný bug</text>
+  <text x="56" y="266" font-size="11" font-weight="bold" fill="#0052cc">✓ CLAUDE.md pro projekt</text>
+  <text x="65" y="283" font-size="10" fill="#333">Nastavit kontext pro AI</text>
+  <text x="56" y="304" font-size="11" font-weight="bold" fill="#0052cc">✓ Prompt šablony</text>
+  <text x="65" y="321" font-size="10" fill="#333">3 šablony pro opakované úkoly</text>
+  <text x="56" y="342" font-size="11" font-weight="bold" fill="#0052cc">✓ Měřit čas</text>
+  <text x="65" y="359" font-size="10" fill="#333">Před/po srovnání na 5 úkolech</text>
+
+  <rect x="56" y="395" width="214" height="38" rx="6" fill="#e8f0fe"/>
+  <text x="163" y="411" text-anchor="middle" font-size="10" fill="#0052cc" font-weight="bold">Cíl: AI používat každý den</text>
+  <text x="163" y="426" text-anchor="middle" font-size="10" fill="#0052cc">alespoň na 1 úkol</text>
+
+  <!-- Phase 2 box -->
+  <rect x="307" y="125" width="246" height="320" rx="10" fill="white" stroke="#107c10" stroke-width="2"/>
+  <rect x="307" y="125" width="246" height="36" rx="10" fill="#107c10"/>
+  <rect x="307" y="145" width="246" height="16" fill="#107c10"/>
+  <text x="430" y="149" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Fáze 2: Systematická rutina</text>
+  <text x="430" y="165" text-anchor="middle" font-size="10" fill="#c8e8c8">Týden 5–8</text>
+
+  <text x="323" y="190" font-size="11" font-weight="bold" fill="#107c10">✓ Azure OpenAI setup</text>
+  <text x="332" y="207" font-size="10" fill="#333">Resource, deployment, API klíč</text>
+  <text x="323" y="228" font-size="11" font-weight="bold" fill="#107c10">✓ První AL integrace</text>
+  <text x="332" y="245" font-size="10" fill="#333">Kategorizace nebo sumarizace</text>
+  <text x="323" y="266" font-size="11" font-weight="bold" fill="#107c10">✓ Kolega demo</text>
+  <text x="332" y="283" font-size="10" fill="#333">Ukázat 1 kolegovi, získat feedback</text>
+  <text x="323" y="304" font-size="11" font-weight="bold" fill="#107c10">✓ AI pro konzultaci</text>
+  <text x="332" y="321" font-size="10" fill="#333">Spec, testy nebo dokumentace</text>
+  <text x="323" y="342" font-size="11" font-weight="bold" fill="#107c10">✓ ROI kalkulace</text>
+  <text x="332" y="359" font-size="10" fill="#333">Spočítat ušetřené hodiny</text>
+
+  <rect x="323" y="395" width="214" height="38" rx="6" fill="#e8f5e9"/>
+  <text x="430" y="411" text-anchor="middle" font-size="10" fill="#107c10" font-weight="bold">Cíl: Jedna AL funkce</text>
+  <text x="430" y="426" text-anchor="middle" font-size="10" fill="#107c10">s AI v produkčním projektu</text>
+
+  <!-- Phase 3 box -->
+  <rect x="574" y="125" width="246" height="320" rx="10" fill="white" stroke="#880e4f" stroke-width="2"/>
+  <rect x="574" y="125" width="246" height="36" rx="10" fill="#880e4f"/>
+  <rect x="574" y="145" width="246" height="16" fill="#880e4f"/>
+  <text x="697" y="149" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Fáze 3: Produkce a sdílení</text>
+  <text x="697" y="165" text-anchor="middle" font-size="10" fill="#ffc8de">Týden 9–13</text>
+
+  <text x="590" y="190" font-size="11" font-weight="bold" fill="#880e4f">✓ Zákaznický návrh</text>
+  <text x="599" y="207" font-size="10" fill="#333">AI projekt s ROI pro zákazníka</text>
+  <text x="590" y="228" font-size="11" font-weight="bold" fill="#880e4f">✓ Power Platform nebo MCP</text>
+  <text x="599" y="245" font-size="10" fill="#333">Bot nebo pokročilá integrace</text>
+  <text x="590" y="266" font-size="11" font-weight="bold" fill="#880e4f">✓ Prezentace šéfovi</text>
+  <text x="599" y="283" font-size="10" fill="#333">Interní proposal na AI projekt</text>
+  <text x="590" y="304" font-size="11" font-weight="bold" fill="#880e4f">✓ Znalosti sdílet</text>
+  <text x="599" y="321" font-size="10" fill="#333">LinkedIn post nebo interní workshop</text>
+  <text x="590" y="342" font-size="11" font-weight="bold" fill="#880e4f">✓ Komunita</text>
+  <text x="599" y="359" font-size="10" fill="#333">Zapojit se, ptát se, odpovídat</text>
+
+  <rect x="590" y="395" width="214" height="38" rx="6" fill="#fce4ec"/>
+  <text x="697" y="411" text-anchor="middle" font-size="10" fill="#880e4f" font-weight="bold">Cíl: AI = součást každého</text>
+  <text x="697" y="426" text-anchor="middle" font-size="10" fill="#880e4f">projektu a nabídky</text>
+
+  <!-- Bottom note -->
+  <rect x="40" y="458" width="780" height="16" rx="4" fill="#fffde7"/>
+  <text x="430" y="470" text-anchor="middle" font-size="10" fill="#666">Roadmapa je orientační – přizpůsobte tempo svému projektu. Důležitá je konzistence, ne rychlost.</text>
+</svg>

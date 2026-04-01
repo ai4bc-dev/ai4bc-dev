@@ -1,0 +1,27 @@
+{
+  "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "name": "AI pro BC - Demo Extension",
+  "publisher": "BCDemoAI",
+  "version": "1.0.0.0",
+  "brief": "Ukázkový kód ke knize AI pro BC vývojáře",
+  "description": "Obsahuje: Purchase Approval workflow, AI Item Categorizer, AI Item Search, OpenAI Helper, AI Setup.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "https://ai4bc.dev",
+  "contextSensitiveHelpUrl": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "27.0.0.0",
+  "application": "27.0.0.0",
+  "idRanges": [
+    { "from": 50100, "to": 50299 }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "14.0"
+}

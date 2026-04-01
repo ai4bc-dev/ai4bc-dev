@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="900" height="420" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a2e">RAG Architektura (Retrieval Augmented Generation)</text>
+  <text x="450" y="55" text-anchor="middle" font-size="11" fill="#666">Jak AI pracuje s vašimi BC dokumenty a daty</text>
+
+  <!-- Phase labels -->
+  <text x="150" y="85" text-anchor="middle" font-size="11" font-weight="bold" fill="#888" letter-spacing="1">INDEXOVÁNÍ</text>
+  <text x="600" y="85" text-anchor="middle" font-size="11" font-weight="bold" fill="#888" letter-spacing="1">DOTAZOVÁNÍ (za běhu)</text>
+  <line x1="20" y1="92" x2="320" y2="92" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="340" y1="92" x2="880" y2="92" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="330" y1="75" x2="330" y2="380" stroke="#ccc" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- INDEXING PHASE -->
+  <!-- Doc store -->
+  <rect x="30" y="110" width="140" height="65" rx="8" fill="#0052cc"/>
+  <text x="100" y="137" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Dokumenty</text>
+  <text x="100" y="153" text-anchor="middle" font-size="10" fill="#c8d8ff">BC help, tikety,</text>
+  <text x="100" y="167" text-anchor="middle" font-size="10" fill="#c8d8ff">specifikace, manuály</text>
+  <!-- Arrow -->
+  <line x1="170" y1="142" x2="205" y2="142" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Chunking -->
+  <rect x="205" y="110" width="110" height="65" rx="8" fill="#5c6bc0"/>
+  <text x="260" y="137" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Rozdělení</text>
+  <text x="260" y="153" text-anchor="middle" font-size="10" fill="#e0e0ff">na úseky</text>
+  <text x="260" y="167" text-anchor="middle" font-size="10" fill="#e0e0ff">(chunks)</text>
+  <!-- Arrow -->
+  <line x1="315" y1="142" x2="105" y2="248" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Embedding model (shared) -->
+  <rect x="30" y="248" width="140" height="65" rx="8" fill="#00695c"/>
+  <text x="100" y="272" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Embedding</text>
+  <text x="100" y="288" text-anchor="middle" font-size="10" fill="#c8ede8">text-embedding-</text>
+  <text x="100" y="302" text-anchor="middle" font-size="10" fill="#c8ede8">3-small</text>
+  <!-- Arrow -->
+  <line x1="170" y1="280" x2="205" y2="280" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Vector DB -->
+  <rect x="205" y="248" width="110" height="65" rx="8" fill="#1565c0"/>
+  <text x="260" y="272" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Vektorová</text>
+  <text x="260" y="288" text-anchor="middle" font-size="11" font-weight="bold" fill="white">databáze</text>
+  <text x="260" y="304" text-anchor="middle" font-size="10" fill="#c8d8ff">Azure AI Search</text>
+
+  <!-- QUERY PHASE -->
+  <!-- User query -->
+  <rect x="350" y="110" width="130" height="65" rx="8" fill="#e65100"/>
+  <text x="415" y="137" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Dotaz</text>
+  <text x="415" y="153" text-anchor="middle" font-size="10" fill="#ffe0d0">uživatele nebo</text>
+  <text x="415" y="167" text-anchor="middle" font-size="10" fill="#ffe0d0">BC procesu</text>
+  <!-- Arrow down -->
+  <line x1="415" y1="175" x2="415" y2="248" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Embedding (same model, reused) -->
+  <rect x="350" y="248" width="130" height="65" rx="8" fill="#00695c"/>
+  <text x="415" y="272" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Embedding</text>
+  <text x="415" y="288" text-anchor="middle" font-size="10" fill="#c8ede8">dotazu</text>
+  <text x="415" y="304" text-anchor="middle" font-size="10" fill="#c8ede8">(stejný model)</text>
+  <!-- Arrow right -->
+  <line x1="480" y1="280" x2="515" y2="280" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Similarity search -->
+  <rect x="515" y="248" width="130" height="65" rx="8" fill="#1565c0"/>
+  <text x="580" y="269" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Similarity</text>
+  <text x="580" y="285" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Search</text>
+  <text x="580" y="301" text-anchor="middle" font-size="10" fill="#c8d8ff">Top-K nejbliž.</text>
+  <text x="580" y="315" text-anchor="middle" font-size="10" fill="#c8d8ff">dokumentů</text>
+  <!-- Arrow right -->
+  <line x1="645" y1="280" x2="680" y2="280" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Augmented prompt -->
+  <rect x="680" y="248" width="130" height="65" rx="8" fill="#4a148c"/>
+  <text x="745" y="272" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Rozšířený</text>
+  <text x="745" y="288" text-anchor="middle" font-size="11" font-weight="bold" fill="white">prompt</text>
+  <text x="745" y="304" text-anchor="middle" font-size="10" fill="#e0c8ff">dotaz + kontext</text>
+  <!-- Arrow up -->
+  <line x1="745" y1="248" x2="745" y2="175" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- LLM -->
+  <rect x="680" y="110" width="130" height="65" rx="8" fill="#880e4f"/>
+  <text x="745" y="137" text-anchor="middle" font-size="12" font-weight="bold" fill="white">LLM</text>
+  <text x="745" y="153" text-anchor="middle" font-size="10" fill="#ffc8de">GPT-4o</text>
+  <text x="745" y="167" text-anchor="middle" font-size="10" fill="#ffc8de">Claude</text>
+  <!-- Arrow right -->
+  <line x1="810" y1="142" x2="845" y2="142" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Response -->
+  <rect x="845" y="110" width="38" height="65" rx="8" fill="#2e7d32"/>
+  <text x="864" y="149" text-anchor="middle" font-size="10" font-weight="bold" fill="white" transform="rotate(90,864,149)">Odpověď</text>
+
+  <!-- Cross-reference arrow: vector DB → similarity search -->
+  <path d="M 260 313 Q 260 370 580 370 Q 680 370 580 315" stroke="#1565c0" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arr-blue)"/>
+  <text x="420" y="383" text-anchor="middle" font-size="10" fill="#1565c0">Vektory z indexu slouží k similarity search</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arr" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#555"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#1565c0"/>
+    </marker>
+  </defs>
+</svg>

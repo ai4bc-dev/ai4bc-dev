@@ -1,0 +1,61 @@
+// Tabulka pro záznamy schvalovacího procesu nákupních objednávek
+// Generováno Claude Code, ručně opraveno: DataClassification, Document Type filter
+table 50100 "ZZ Purchase Approval Entry"
+{
+    Caption = 'Purchase Approval Entry';
+    DataClassification = CustomerContent;
+
+    fields
+    {
+        field(1; "Entry No."; Integer)
+        {
+            Caption = 'Entry No.';
+            AutoIncrement = true;
+        }
+        field(2; "Purchase Order No."; Code[20])
+        {
+            Caption = 'Purchase Order No.';
+            TableRelation = "Purchase Header"."No." where("Document Type" = const(Order));
+        }
+        field(3; "Order Amount"; Decimal)
+        {
+            Caption = 'Order Amount';
+            DecimalPlaces = 2 : 2;
+        }
+        field(4; Status; Enum "ZZ Approval Status")
+        {
+            Caption = 'Status';
+        }
+        field(5; "Approver User ID"; Code[50])
+        {
+            Caption = 'Approver User ID';
+            TableRelation = User."User Name";
+        }
+        field(6; "Requester User ID"; Code[50])
+        {
+            Caption = 'Requester User ID';
+            TableRelation = User."User Name";
+        }
+        field(7; "Rejection Comment"; Text[250])
+        {
+            Caption = 'Rejection Comment';
+        }
+        field(8; "Request Date Time"; DateTime)
+        {
+            Caption = 'Request Date Time';
+        }
+        field(9; "Decision Date Time"; DateTime)
+        {
+            Caption = 'Decision Date Time';
+        }
+    }
+
+    keys
+    {
+        key(PK; "Entry No.")
+        {
+            Clustered = true;
+        }
+        key(K1; "Purchase Order No.", Status) { }
+    }
+}

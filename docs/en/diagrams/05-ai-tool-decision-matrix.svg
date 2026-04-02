@@ -2,15 +2,15 @@
   <rect width="860" height="500" fill="#f8f9fa" rx="12"/>
 
   <!-- Title -->
-  <text x="430" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">Which AI Tool for Which BC Task</text>
-  <text x="430" y="52" text-anchor="middle" font-size="11" fill="#666">Decision Matrix for BC Developers and Consultants</text>
+  <text x="430" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">When to Use Which AI Tool in a BC Project</text>
+  <text x="430" y="52" text-anchor="middle" font-size="11" fill="#666">Decision matrix for BC developers and consultants</text>
 
   <!-- Table header -->
   <rect x="30" y="68" width="800" height="36" rx="6" fill="#0052cc"/>
   <text x="130" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Tool</text>
   <text x="300" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Best For</text>
-  <text x="520" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="white">BC Use Cases</text>
-  <text x="740" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Not For</text>
+  <text x="520" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Specific BC Use Cases</text>
+  <text x="740" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Not Suited For</text>
 
   <!-- Dividers -->
   <line x1="220" y1="68" x2="220" y2="468" stroke="#ddd" stroke-width="1"/>
@@ -22,51 +22,51 @@
   <rect x="30" y="104" width="6" height="70" fill="#4285f4"/>
   <text x="130" y="128" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">Claude Code /</text>
   <text x="130" y="144" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">GitHub Copilot</text>
-  <text x="130" y="162" text-anchor="middle" font-size="10" fill="#666">AI IDE Assistant</text>
-  <text x="300" y="124" text-anchor="middle" font-size="10" fill="#333">Psaní a refaktoring kódu</text>
-  <text x="300" y="140" text-anchor="middle" font-size="10" fill="#333">Debugging a vysvětlování</text>
-  <text x="300" y="156" text-anchor="middle" font-size="10" fill="#333">Generování testů</text>
+  <text x="130" y="162" text-anchor="middle" font-size="10" fill="#666">AI IDE assistant</text>
+  <text x="300" y="124" text-anchor="middle" font-size="10" fill="#333">Writing and refactoring code</text>
+  <text x="300" y="140" text-anchor="middle" font-size="10" fill="#333">Debugging and explaining</text>
+  <text x="300" y="156" text-anchor="middle" font-size="10" fill="#333">Generating tests</text>
   <text x="300" y="172" text-anchor="middle" font-size="10" fill="#333">Code review</text>
-  <text x="520" y="124" text-anchor="middle" font-size="10" fill="#333">AL codeunits a page extensions</text>
-  <text x="520" y="140" text-anchor="middle" font-size="10" fill="#333">Oprava compile chyb v AL</text>
-  <text x="520" y="156" text-anchor="middle" font-size="10" fill="#333">Dokumentace procedur</text>
-  <text x="520" y="172" text-anchor="middle" font-size="10" fill="#333">CLAUDE.md pro BC projekty</text>
-  <text x="740" y="140" text-anchor="middle" font-size="10" fill="#c62828">Produkční AI funkce</text>
-  <text x="740" y="156" text-anchor="middle" font-size="10" fill="#c62828">v BC pro zákazníky</text>
+  <text x="520" y="124" text-anchor="middle" font-size="10" fill="#333">AL codeunits and page extensions</text>
+  <text x="520" y="140" text-anchor="middle" font-size="10" fill="#333">Fixing AL compile errors</text>
+  <text x="520" y="156" text-anchor="middle" font-size="10" fill="#333">Documenting procedures</text>
+  <text x="520" y="172" text-anchor="middle" font-size="10" fill="#333">CLAUDE.md for BC projects</text>
+  <text x="740" y="140" text-anchor="middle" font-size="10" fill="#c62828">Production AI features</text>
+  <text x="740" y="156" text-anchor="middle" font-size="10" fill="#c62828">in BC for customers</text>
 
   <!-- Row 2: Azure OpenAI -->
   <rect x="30" y="174" width="800" height="70" rx="0" fill="white"/>
   <rect x="30" y="174" width="6" height="70" fill="#107c10"/>
   <text x="130" y="198" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">Azure OpenAI</text>
   <text x="130" y="214" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">+ AL HttpClient</text>
-  <text x="130" y="232" text-anchor="middle" font-size="10" fill="#666">Custom integrace</text>
-  <text x="300" y="194" text-anchor="middle" font-size="10" fill="#333">Vlastní AI logika v BC</text>
-  <text x="300" y="210" text-anchor="middle" font-size="10" fill="#333">Kategorizace a klasifikace</text>
-  <text x="300" y="226" text-anchor="middle" font-size="10" fill="#333">Generování textu z BC dat</text>
+  <text x="130" y="232" text-anchor="middle" font-size="10" fill="#666">Custom integration</text>
+  <text x="300" y="194" text-anchor="middle" font-size="10" fill="#333">Custom AI logic in BC</text>
+  <text x="300" y="210" text-anchor="middle" font-size="10" fill="#333">Categorization and classification</text>
+  <text x="300" y="226" text-anchor="middle" font-size="10" fill="#333">Generating text from BC data</text>
   <text x="300" y="242" text-anchor="middle" font-size="10" fill="#333">Structured JSON output</text>
-  <text x="520" y="194" text-anchor="middle" font-size="10" fill="#333">Auto-kategorizace BC položek</text>
-  <text x="520" y="210" text-anchor="middle" font-size="10" fill="#333">Návrhy prodejních položek</text>
-  <text x="520" y="226" text-anchor="middle" font-size="10" fill="#333">AI-powered vyhledávání</text>
-  <text x="520" y="242" text-anchor="middle" font-size="10" fill="#333">Inteligentní upozornění</text>
-  <text x="740" y="210" text-anchor="middle" font-size="10" fill="#c62828">Psaní kódu, generování</text>
-  <text x="740" y="226" text-anchor="middle" font-size="10" fill="#c62828">dokumentace pro vývojáře</text>
+  <text x="520" y="194" text-anchor="middle" font-size="10" fill="#333">Auto-categorization of BC items</text>
+  <text x="520" y="210" text-anchor="middle" font-size="10" fill="#333">Sales item suggestions</text>
+  <text x="520" y="226" text-anchor="middle" font-size="10" fill="#333">AI-powered search</text>
+  <text x="520" y="242" text-anchor="middle" font-size="10" fill="#333">Intelligent alerts</text>
+  <text x="740" y="210" text-anchor="middle" font-size="10" fill="#c62828">Writing code, generating</text>
+  <text x="740" y="226" text-anchor="middle" font-size="10" fill="#c62828">developer documentation</text>
 
   <!-- Row 3: MS Copilot in BC -->
   <rect x="30" y="244" width="800" height="70" rx="0" fill="#e8f0fe"/>
   <rect x="30" y="244" width="6" height="70" fill="#0078d4"/>
   <text x="130" y="268" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">Microsoft</text>
-  <text x="130" y="284" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">Copilot v BC</text>
-  <text x="130" y="302" text-anchor="middle" font-size="10" fill="#666">Vestavěný Copilot</text>
-  <text x="300" y="264" text-anchor="middle" font-size="10" fill="#333">Hotové AI funkce bez kódu</text>
-  <text x="300" y="280" text-anchor="middle" font-size="10" fill="#333">Rychlé nasazení u zákazníka</text>
+  <text x="130" y="284" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">Copilot in BC</text>
+  <text x="130" y="302" text-anchor="middle" font-size="10" fill="#666">Built-in Copilot</text>
+  <text x="300" y="264" text-anchor="middle" font-size="10" fill="#333">Ready-made AI features, no code</text>
+  <text x="300" y="280" text-anchor="middle" font-size="10" fill="#333">Quick deployment at customer</text>
   <text x="300" y="296" text-anchor="middle" font-size="10" fill="#333">Standard Microsoft UX</text>
-  <text x="300" y="312" text-anchor="middle" font-size="10" fill="#333">Minimální nastavení</text>
-  <text x="520" y="264" text-anchor="middle" font-size="10" fill="#333">Marketing text pro položky</text>
+  <text x="300" y="312" text-anchor="middle" font-size="10" fill="#333">Minimal setup</text>
+  <text x="520" y="264" text-anchor="middle" font-size="10" fill="#333">Marketing text for items</text>
   <text x="520" y="280" text-anchor="middle" font-size="10" fill="#333">Bank reconciliation</text>
-  <text x="520" y="296" text-anchor="middle" font-size="10" fill="#333">Návrhy řádků objednávek</text>
+  <text x="520" y="296" text-anchor="middle" font-size="10" fill="#333">Order line suggestions</text>
   <text x="520" y="312" text-anchor="middle" font-size="10" fill="#333">Sustainability tracking (BC 27)</text>
-  <text x="740" y="280" text-anchor="middle" font-size="10" fill="#c62828">Custom byznys logika,</text>
-  <text x="740" y="296" text-anchor="middle" font-size="10" fill="#c62828">specifické firemní procesy</text>
+  <text x="740" y="280" text-anchor="middle" font-size="10" fill="#c62828">Custom business logic,</text>
+  <text x="740" y="296" text-anchor="middle" font-size="10" fill="#c62828">company-specific processes</text>
 
   <!-- Row 4: Power Platform -->
   <rect x="30" y="314" width="800" height="70" rx="0" fill="white"/>
@@ -74,31 +74,31 @@
   <text x="130" y="338" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">Power Platform</text>
   <text x="130" y="354" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">AI Builder</text>
   <text x="130" y="372" text-anchor="middle" font-size="10" fill="#666">Low-code AI</text>
-  <text x="300" y="334" text-anchor="middle" font-size="10" fill="#333">Zpracování dokumentů</text>
-  <text x="300" y="350" text-anchor="middle" font-size="10" fill="#333">Automatizace s AI bez kódu</text>
-  <text x="300" y="366" text-anchor="middle" font-size="10" fill="#333">Chatboty pro zákazníky</text>
-  <text x="300" y="382" text-anchor="middle" font-size="10" fill="#333">Prediktivní modely</text>
-  <text x="520" y="334" text-anchor="middle" font-size="10" fill="#333">Skenování faktur do BC</text>
-  <text x="520" y="350" text-anchor="middle" font-size="10" fill="#333">Zákaznický bot pro stav obj.</text>
-  <text x="520" y="366" text-anchor="middle" font-size="10" fill="#333">AI klasifikace z Power Automate</text>
-  <text x="520" y="382" text-anchor="middle" font-size="10" fill="#333">Predikce poptávky</text>
-  <text x="740" y="350" text-anchor="middle" font-size="10" fill="#c62828">Komplexní custom kód,</text>
-  <text x="740" y="366" text-anchor="middle" font-size="10" fill="#c62828">vysoký objem API volání</text>
+  <text x="300" y="334" text-anchor="middle" font-size="10" fill="#333">Document processing</text>
+  <text x="300" y="350" text-anchor="middle" font-size="10" fill="#333">AI automation without code</text>
+  <text x="300" y="366" text-anchor="middle" font-size="10" fill="#333">Customer chatbots</text>
+  <text x="300" y="382" text-anchor="middle" font-size="10" fill="#333">Predictive models</text>
+  <text x="520" y="334" text-anchor="middle" font-size="10" fill="#333">Invoice scanning into BC</text>
+  <text x="520" y="350" text-anchor="middle" font-size="10" fill="#333">Customer bot for order status</text>
+  <text x="520" y="366" text-anchor="middle" font-size="10" fill="#333">AI classification via Power Automate</text>
+  <text x="520" y="382" text-anchor="middle" font-size="10" fill="#333">Demand forecasting</text>
+  <text x="740" y="350" text-anchor="middle" font-size="10" fill="#c62828">Complex custom code,</text>
+  <text x="740" y="366" text-anchor="middle" font-size="10" fill="#c62828">high-volume API calls</text>
 
   <!-- Row 5: RAG + Agents -->
   <rect x="30" y="384" width="800" height="70" rx="0" fill="#e8f0fe"/>
   <rect x="30" y="384" width="6" height="70" fill="#880e4f"/>
-  <text x="130" y="408" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">RAG / Agenti /</text>
+  <text x="130" y="408" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">RAG / Agents /</text>
   <text x="130" y="424" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">MCP Server</text>
-  <text x="130" y="442" text-anchor="middle" font-size="10" fill="#666">Pokročilé techniky</text>
-  <text x="300" y="404" text-anchor="middle" font-size="10" fill="#333">Komplexní znalostní systémy</text>
-  <text x="300" y="420" text-anchor="middle" font-size="10" fill="#333">Autonomní procesy v BC</text>
-  <text x="300" y="436" text-anchor="middle" font-size="10" fill="#333">Přímý přístup AI k BC datům</text>
-  <text x="520" y="404" text-anchor="middle" font-size="10" fill="#333">Chatbot nad BC dokumentací</text>
-  <text x="520" y="420" text-anchor="middle" font-size="10" fill="#333">Agent pro zpracování emailů</text>
-  <text x="520" y="436" text-anchor="middle" font-size="10" fill="#333">BC jako MCP server pro Claude</text>
-  <text x="740" y="420" text-anchor="middle" font-size="10" fill="#c62828">Jednoduché úkoly – zbytečně</text>
-  <text x="740" y="436" text-anchor="middle" font-size="10" fill="#c62828">složité řešení</text>
+  <text x="130" y="442" text-anchor="middle" font-size="10" fill="#666">Advanced techniques</text>
+  <text x="300" y="404" text-anchor="middle" font-size="10" fill="#333">Complex knowledge systems</text>
+  <text x="300" y="420" text-anchor="middle" font-size="10" fill="#333">Autonomous processes in BC</text>
+  <text x="300" y="436" text-anchor="middle" font-size="10" fill="#333">Direct AI access to BC data</text>
+  <text x="520" y="404" text-anchor="middle" font-size="10" fill="#333">Chatbot over BC documentation</text>
+  <text x="520" y="420" text-anchor="middle" font-size="10" fill="#333">Agent for email processing</text>
+  <text x="520" y="436" text-anchor="middle" font-size="10" fill="#333">BC as MCP server for Claude</text>
+  <text x="740" y="420" text-anchor="middle" font-size="10" fill="#c62828">Simple tasks — unnecessarily</text>
+  <text x="740" y="436" text-anchor="middle" font-size="10" fill="#c62828">complex solution</text>
 
   <!-- Bottom border -->
   <rect x="30" y="454" width="800" height="2" fill="#0052cc" opacity="0.3"/>

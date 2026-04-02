@@ -2,13 +2,13 @@
   <rect width="900" height="520" fill="#f8f9fa" rx="12"/>
 
   <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a2e">AI Agent: Email-to-Order Workflow</text>
-  <text x="450" y="56" text-anchor="middle" font-size="12" fill="#666">Tok zpracování emailové objednávky přes AI agenta</text>
+  <text x="450" y="56" text-anchor="middle" font-size="12" fill="#666">Processing flow for email orders through an AI agent</text>
 
   <!-- Step 1: Email -->
   <rect x="30" y="90" width="160" height="70" rx="8" fill="#0078d4" opacity="0.9"/>
   <text x="110" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">1. Email</text>
-  <text x="110" y="138" text-anchor="middle" font-size="10" fill="#e0e8f0">Příchozí objednávka</text>
-  <text x="110" y="152" text-anchor="middle" font-size="10" fill="#e0e8f0">od zákazníka</text>
+  <text x="110" y="138" text-anchor="middle" font-size="10" fill="#e0e8f0">Incoming order</text>
+  <text x="110" y="152" text-anchor="middle" font-size="10" fill="#e0e8f0">from customer</text>
 
   <!-- Arrow -->
   <line x1="190" y1="125" x2="230" y2="125" stroke="#0078d4" stroke-width="2" marker-end="url(#arrow1)"/>
@@ -17,25 +17,25 @@
   <rect x="230" y="80" width="180" height="90" rx="8" fill="#0a1628"/>
   <text x="320" y="108" text-anchor="middle" font-size="12" font-weight="bold" fill="#00b4d8">2. AI Agent</text>
   <text x="320" y="126" text-anchor="middle" font-size="10" fill="#a0c4ff">GPT-4o + Function Calling</text>
-  <text x="320" y="144" text-anchor="middle" font-size="10" fill="#a0c4ff">Extrakce: zákazník,</text>
-  <text x="320" y="158" text-anchor="middle" font-size="10" fill="#a0c4ff">položky, množství</text>
+  <text x="320" y="144" text-anchor="middle" font-size="10" fill="#a0c4ff">Extraction: customer,</text>
+  <text x="320" y="158" text-anchor="middle" font-size="10" fill="#a0c4ff">items, quantities</text>
 
   <!-- Arrow down to BC -->
   <line x1="320" y1="170" x2="320" y2="210" stroke="#00b4d8" stroke-width="2" marker-end="url(#arrow2)"/>
 
   <!-- Step 3: BC API calls (3 boxes) -->
   <rect x="140" y="210" width="130" height="60" rx="6" fill="#fff" stroke="#0078d4" stroke-width="1.5"/>
-  <text x="205" y="235" text-anchor="middle" font-size="10" font-weight="bold" fill="#0078d4">3a. Najdi zákazníka</text>
+  <text x="205" y="235" text-anchor="middle" font-size="10" font-weight="bold" fill="#0078d4">3a. Find customer</text>
   <text x="205" y="250" text-anchor="middle" font-size="9" fill="#555">get_customer_by_name</text>
   <text x="205" y="262" text-anchor="middle" font-size="9" fill="#555">→ BC OData API</text>
 
   <rect x="290" y="210" width="130" height="60" rx="6" fill="#fff" stroke="#0078d4" stroke-width="1.5"/>
-  <text x="355" y="235" text-anchor="middle" font-size="10" font-weight="bold" fill="#0078d4">3b. Zkontroluj kredit</text>
+  <text x="355" y="235" text-anchor="middle" font-size="10" font-weight="bold" fill="#0078d4">3b. Check credit</text>
   <text x="355" y="250" text-anchor="middle" font-size="9" fill="#555">get_customer_balance</text>
   <text x="355" y="262" text-anchor="middle" font-size="9" fill="#555">→ BC OData API</text>
 
   <rect x="440" y="210" width="130" height="60" rx="6" fill="#fff" stroke="#0078d4" stroke-width="1.5"/>
-  <text x="505" y="235" text-anchor="middle" font-size="10" font-weight="bold" fill="#0078d4">3c. Vytvoř objednávku</text>
+  <text x="505" y="235" text-anchor="middle" font-size="10" font-weight="bold" fill="#0078d4">3c. Create order</text>
   <text x="505" y="250" text-anchor="middle" font-size="9" fill="#555">create_sales_order</text>
   <text x="505" y="262" text-anchor="middle" font-size="9" fill="#555">→ BC OData API</text>
 
@@ -45,31 +45,31 @@
 
   <!-- Decision diamond -->
   <polygon points="320,310 380,345 320,380 260,345" fill="#fff" stroke="#e67e22" stroke-width="2"/>
-  <text x="320" y="342" text-anchor="middle" font-size="10" font-weight="bold" fill="#e67e22">Vše OK?</text>
-  <text x="320" y="356" text-anchor="middle" font-size="9" fill="#e67e22">Kredit, data</text>
+  <text x="320" y="342" text-anchor="middle" font-size="10" font-weight="bold" fill="#e67e22">All OK?</text>
+  <text x="320" y="356" text-anchor="middle" font-size="9" fill="#e67e22">Credit, data</text>
 
   <!-- Arrow from 3 boxes to diamond -->
   <line x1="320" y1="270" x2="320" y2="310" stroke="#0078d4" stroke-width="1.5" marker-end="url(#arrow1)"/>
 
   <!-- YES path -->
   <line x1="380" y1="345" x2="480" y2="345" stroke="#27ae60" stroke-width="2" marker-end="url(#arrowGreen)"/>
-  <text x="425" y="338" font-size="10" fill="#27ae60" font-weight="bold">ANO</text>
+  <text x="425" y="338" font-size="10" fill="#27ae60" font-weight="bold">YES</text>
 
   <!-- Success box -->
   <rect x="480" y="315" width="160" height="60" rx="8" fill="#27ae60" opacity="0.9"/>
-  <text x="560" y="340" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">4. Objednávka</text>
-  <text x="560" y="358" text-anchor="middle" font-size="10" fill="#e8f8e8">vytvořena v BC</text>
-  <text x="560" y="372" text-anchor="middle" font-size="10" fill="#e8f8e8">+ potvrzovací email</text>
+  <text x="560" y="340" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">4. Order</text>
+  <text x="560" y="358" text-anchor="middle" font-size="10" fill="#e8f8e8">created in BC</text>
+  <text x="560" y="372" text-anchor="middle" font-size="10" fill="#e8f8e8">+ confirmation email</text>
 
   <!-- NO path -->
   <line x1="260" y1="345" x2="160" y2="345" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowRed)"/>
-  <text x="215" y="338" font-size="10" fill="#e74c3c" font-weight="bold">NE</text>
+  <text x="215" y="338" font-size="10" fill="#e74c3c" font-weight="bold">NO</text>
 
   <!-- Escalation box -->
   <rect x="30" y="315" width="130" height="60" rx="8" fill="#e74c3c" opacity="0.9"/>
-  <text x="95" y="340" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Eskalace</text>
-  <text x="95" y="358" text-anchor="middle" font-size="10" fill="#fce8e8">na člověka</text>
-  <text x="95" y="372" text-anchor="middle" font-size="10" fill="#fce8e8">+ důvod</text>
+  <text x="95" y="340" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Escalation</text>
+  <text x="95" y="358" text-anchor="middle" font-size="10" fill="#fce8e8">to a human</text>
+  <text x="95" y="372" text-anchor="middle" font-size="10" fill="#fce8e8">+ reason</text>
 
   <!-- Guardrails box -->
   <rect x="630" y="90" width="240" height="290" rx="8" fill="#fff3e0" stroke="#e67e22" stroke-width="1.5"/>
@@ -77,32 +77,32 @@
   <line x1="650" y1="125" x2="850" y2="125" stroke="#e67e22" stroke-width="0.5"/>
 
   <text x="650" y="150" font-size="10" fill="#555" font-weight="bold">Human-in-the-loop:</text>
-  <text x="660" y="168" font-size="10" fill="#555">• Objednávka > 50 000 Kč</text>
-  <text x="660" y="183" font-size="10" fill="#555">  → čeká na schválení</text>
+  <text x="660" y="168" font-size="10" fill="#555">• Order > 50,000 CZK</text>
+  <text x="660" y="183" font-size="10" fill="#555">  → awaits approval</text>
 
-  <text x="650" y="208" font-size="10" fill="#555" font-weight="bold">Dry-run mód:</text>
-  <text x="660" y="226" font-size="10" fill="#555">• Při testování: jen čtení</text>
-  <text x="660" y="241" font-size="10" fill="#555">• Write operace vypnuté</text>
+  <text x="650" y="208" font-size="10" fill="#555" font-weight="bold">Dry-run mode:</text>
+  <text x="660" y="226" font-size="10" fill="#555">• During testing: read-only</text>
+  <text x="660" y="241" font-size="10" fill="#555">• Write operations disabled</text>
 
-  <text x="650" y="266" font-size="10" fill="#555" font-weight="bold">Logování:</text>
-  <text x="660" y="284" font-size="10" fill="#555">• Každé rozhodnutí agenta</text>
-  <text x="660" y="299" font-size="10" fill="#555">• Vstupy + výstupy + čas</text>
+  <text x="650" y="266" font-size="10" fill="#555" font-weight="bold">Logging:</text>
+  <text x="660" y="284" font-size="10" fill="#555">• Every agent decision</text>
+  <text x="660" y="299" font-size="10" fill="#555">• Inputs + outputs + time</text>
 
   <text x="650" y="324" font-size="10" fill="#555" font-weight="bold">Fallback:</text>
-  <text x="660" y="342" font-size="10" fill="#555">• Neznámý zákazník → eskalace</text>
-  <text x="660" y="357" font-size="10" fill="#555">• Chybějící data → eskalace</text>
-  <text x="660" y="372" font-size="10" fill="#555">• Max 10 iterací → stop</text>
+  <text x="660" y="342" font-size="10" fill="#555">• Unknown customer → escalation</text>
+  <text x="660" y="357" font-size="10" fill="#555">• Missing data → escalation</text>
+  <text x="660" y="372" font-size="10" fill="#555">• Max 10 iterations → stop</text>
 
   <!-- Stats bar -->
   <rect x="30" y="420" width="840" height="80" rx="8" fill="#e8f4fd"/>
-  <text x="450" y="445" text-anchor="middle" font-size="13" font-weight="bold" fill="#0078d4">Výsledky z praxe</text>
-  <text x="150" y="470" text-anchor="middle" font-size="11" fill="#555">85 % automaticky</text>
+  <text x="450" y="445" text-anchor="middle" font-size="13" font-weight="bold" fill="#0078d4">Real-world Results</text>
+  <text x="150" y="470" text-anchor="middle" font-size="11" fill="#555">85% automated</text>
   <text x="150" y="486" text-anchor="middle" font-size="20" font-weight="bold" fill="#27ae60">✓</text>
-  <text x="370" y="470" text-anchor="middle" font-size="11" fill="#555">10 % s korekcí</text>
+  <text x="370" y="470" text-anchor="middle" font-size="11" fill="#555">10% with corrections</text>
   <text x="370" y="486" text-anchor="middle" font-size="20" font-weight="bold" fill="#e67e22">~</text>
-  <text x="590" y="470" text-anchor="middle" font-size="11" fill="#555">5 % eskalace</text>
+  <text x="590" y="470" text-anchor="middle" font-size="11" fill="#555">5% escalated</text>
   <text x="590" y="486" text-anchor="middle" font-size="20" font-weight="bold" fill="#e74c3c">↑</text>
-  <text x="780" y="470" text-anchor="middle" font-size="11" fill="#555">Úspora: 2h/den</text>
+  <text x="780" y="470" text-anchor="middle" font-size="11" fill="#555">Savings: 2h/day</text>
   <text x="780" y="486" text-anchor="middle" font-size="20" font-weight="bold" fill="#0078d4">⏱</text>
 
   <defs>

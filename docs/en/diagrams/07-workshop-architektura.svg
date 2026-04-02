@@ -2,8 +2,8 @@
   <rect width="900" height="480" fill="#f8f9fa" rx="12"/>
 
   <!-- Title -->
-  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a2e">Architektura: Purchase Approval Extension</text>
-  <text x="450" y="56" text-anchor="middle" font-size="12" fill="#666">Schéma objektů a jejich vztahů v AL extension</text>
+  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a2e">Architecture: Purchase Approval Extension</text>
+  <text x="450" y="56" text-anchor="middle" font-size="12" fill="#666">Object schema and relationships in an AL extension</text>
 
   <!-- Table box -->
   <rect x="40" y="90" width="200" height="160" rx="8" fill="#fff" stroke="#0078d4" stroke-width="2"/>
@@ -34,11 +34,11 @@
   <text x="430" y="112" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Codeunit 50100</text>
   <text x="430" y="142" text-anchor="middle" font-size="11" fill="#1a1a2e" font-weight="bold">ZZ Purchase Approval Mgmt</text>
   <text x="325" y="165" font-size="10" fill="#555">RequestApproval(PurchHeader)</text>
-  <text x="325" y="180" font-size="10" fill="#555">  → ověří limit 50 000 Kč</text>
-  <text x="325" y="195" font-size="10" fill="#555">  → vytvoří Entry záznam</text>
+  <text x="325" y="180" font-size="10" fill="#555">  → checks limit 50,000 CZK</text>
+  <text x="325" y="195" font-size="10" fill="#555">  → creates Entry record</text>
   <text x="325" y="210" font-size="10" fill="#555">ApproveOrder(EntryNo)</text>
   <text x="325" y="225" font-size="10" fill="#555">RejectOrder(EntryNo, Comment)</text>
-  <text x="325" y="240" font-size="10" fill="#555">  → vyžaduje Comment</text>
+  <text x="325" y="240" font-size="10" fill="#555">  → requires Comment</text>
 
   <!-- Email codeunit -->
   <rect x="310" y="280" width="240" height="100" rx="8" fill="#fff" stroke="#00b4d8" stroke-width="2"/>
@@ -55,16 +55,16 @@
   <rect x="620" y="114" width="240" height="8" fill="#4da6ff"/>
   <text x="740" y="112" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Page 50100</text>
   <text x="740" y="142" text-anchor="middle" font-size="11" fill="#1a1a2e" font-weight="bold">ZZ Purchase Approval List</text>
-  <text x="635" y="165" font-size="10" fill="#555">Seznam pending žádostí</text>
-  <text x="635" y="180" font-size="10" fill="#555">Akce: Schválit / Zamítnout</text>
-  <text x="635" y="195" font-size="10" fill="#555">Filtr: Approver = CurrentUser</text>
+  <text x="635" y="165" font-size="10" fill="#555">List of pending requests</text>
+  <text x="635" y="180" font-size="10" fill="#555">Actions: Approve / Reject</text>
+  <text x="635" y="195" font-size="10" fill="#555">Filter: Approver = CurrentUser</text>
   <text x="635" y="210" font-size="10" fill="#555">SourceTable: Approval Entry</text>
 
   <!-- BC Standard -->
   <rect x="620" y="260" width="240" height="80" rx="8" fill="#e8f4fd" stroke="#0078d4" stroke-width="1" stroke-dasharray="5,3"/>
   <text x="740" y="290" text-anchor="middle" font-size="11" fill="#0078d4" font-weight="bold">BC Standard</text>
   <text x="740" y="310" text-anchor="middle" font-size="10" fill="#555">Purchase Header</text>
-  <text x="740" y="325" text-anchor="middle" font-size="10" fill="#555">(bez modifikace — vztah přes No.)</text>
+  <text x="740" y="325" text-anchor="middle" font-size="10" fill="#555">(no modification — linked via No.)</text>
 
   <!-- Arrows -->
   <!-- Table → Codeunit -->
@@ -84,11 +84,11 @@
   <circle cx="70" cy="442" r="6" fill="#0078d4"/>
   <text x="85" y="447" font-size="10" fill="#555">Business Logic</text>
   <circle cx="210" cy="442" r="6" fill="#00b4d8"/>
-  <text x="225" y="447" font-size="10" fill="#555">Email Notifikace</text>
+  <text x="225" y="447" font-size="10" fill="#555">Email Notification</text>
   <circle cx="370" cy="442" r="6" fill="#4da6ff"/>
   <text x="385" y="447" font-size="10" fill="#555">UI (Page)</text>
   <rect x="500" y="436" width="30" height="12" rx="2" fill="none" stroke="#0078d4" stroke-width="1" stroke-dasharray="3,2"/>
-  <text x="540" y="447" font-size="10" fill="#555">Vztah k BC standardu (bez modifikace)</text>
+  <text x="540" y="447" font-size="10" fill="#555">Relation to BC standard (no modification)</text>
 
   <!-- Arrow markers -->
   <defs>

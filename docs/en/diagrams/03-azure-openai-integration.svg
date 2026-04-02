@@ -3,7 +3,7 @@
 
   <!-- Title -->
   <text x="430" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">Calling Azure OpenAI API from AL Code</text>
-  <text x="430" y="52" text-anchor="middle" font-size="11" fill="#666">Integration Sequence Diagram</text>
+  <text x="430" y="52" text-anchor="middle" font-size="11" fill="#666">Integration sequence diagram</text>
 
   <!-- Actors -->
   <!-- BC User -->
@@ -61,11 +61,11 @@
 
   <!-- 8: AL parses -->
   <rect x="210" y="278" width="70" height="18" rx="3" fill="#e8edf2"/>
-  <text x="245" y="291" text-anchor="middle" font-size="9" fill="#333">parsuje choices[0]</text>
+  <text x="245" y="291" text-anchor="middle" font-size="9" fill="#333">parses choices[0]</text>
 
   <!-- 9: AL → User -->
   <line x1="240" y1="300" x2="85" y2="300" stroke="#5c6bc0" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#seqarr-purple)"/>
-  <text x="162" y="293" text-anchor="middle" font-size="10" fill="#5c6bc0">6. Text odpovědi AI</text>
+  <text x="162" y="293" text-anchor="middle" font-size="10" fill="#5c6bc0">6. AI response text</text>
 
   <!-- Markers -->
   <defs>

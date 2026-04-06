@@ -16,6 +16,7 @@ from azure.search.documents.indexes.models import (
     SearchField
 )
 from azure.core.credentials import AzureKeyCredential
+from azure.search.documents.models import VectorizedQuery
 
 # === Konfigurace ===
 BC_BASE_URL = "https://api.businesscentral.dynamics.com/v2.0/{tenant_id}/{environment}/api/v2.0"
@@ -187,11 +188,7 @@ def search(query: str, top_k: int = 5):
 
     results = search_client.search(
         search_text=None,
-        vector_queries=[{
-            "vector": query_embedding,
-            "k_nearest_neighbors": top_k,
-            "fields": "embedding"
-        }]
+        vector_queries=[VectorizedQuery(vector=query_embedding, k_nearest_neighbors=top_k, fields="embedding")]
     )
 
     return [{"id": r["id"], "content": r["content"], "score": r["@search.score"]}

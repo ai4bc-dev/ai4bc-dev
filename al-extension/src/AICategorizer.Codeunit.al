@@ -21,7 +21,7 @@ codeunit 50102 "Item AI Categorizer"
         if CategoryList = '' then
             Error('No item categories are defined.');
 
-        Item.SetFilter("Item Category Code", '%1', '');
+        Item.SetRange("Item Category Code", '');
         Item.SetFilter(Description, '<>%1', '');
 
         if Item.IsEmpty() then begin

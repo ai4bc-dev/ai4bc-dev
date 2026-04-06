@@ -56,7 +56,7 @@ pip install -r requirements.txt
 
 - **AL Extension:** VS Code + AL Language Extension, BC v27+ sandbox
 - **Python:** Python 3.10+, Azure subscription
-- **MCP Server:** Node.js 20+, Azure AD App Registration
+- **MCP Server:** Node.js 18+, Azure AD App Registration
 - **All:** Azure OpenAI Service resource with a deployed model
 
 ## 📖 Book Chapters → Code Mapping

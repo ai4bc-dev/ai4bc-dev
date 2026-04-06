@@ -1,8 +1,10 @@
+namespace BCDemoAI;
+
 page 50110 "AI Item Search"
 {
     PageType = List;
     SourceTable = Item;
-    Caption = 'Vyhledávání položek pomocí AI';
+    Caption = 'AI Item Search';
     ApplicationArea = All;
     UsageCategory = Lists;
 
@@ -12,12 +14,12 @@ page 50110 "AI Item Search"
         {
             group(SearchGroup)
             {
-                Caption = 'Hledám';
+                Caption = 'Search';
                 field(SearchQuery; SearchQueryTxt)
                 {
                     ApplicationArea = All;
-                    Caption = 'Popište co hledáte';
-                    ToolTip = 'Zadejte popis v přirozeném jazyce, co hledáte.';
+                    Caption = 'Describe what you are looking for';
+                    ToolTip = 'Enter a natural language description of what you are looking for.';
 
                     trigger OnValidate()
                     begin
@@ -41,7 +43,7 @@ page 50110 "AI Item Search"
         {
             action(Search)
             {
-                Caption = 'Vyhledat pomocí AI';
+                Caption = 'Search with AI';
                 Image = Find;
                 ApplicationArea = All;
 

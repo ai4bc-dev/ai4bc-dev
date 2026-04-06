@@ -1,183 +1,183 @@
-# Prompt šablony pro BC vývojáře
+# Prompt Templates for BC Developers
 
-> Knihovna připravených šablon pro každodenní AL vývoj s AI.
-> Zkopíruj šablonu, vyplň [závorky], pošli do Claude nebo ChatGPT.
+> A library of ready-made templates for everyday AL development with AI.
+> Copy a template, fill in the [brackets], send it to Claude or ChatGPT.
 
 ---
 
-## Šablona 1: Nový AL codeunit
+## Template 1: New AL Codeunit
 
 ```
-Jsem BC vývojář, pracuji v Business Central verzi [verze].
-Projekt: [krátký popis projektu nebo extension]
+I am a BC developer, working with Business Central version [version].
+Project: [brief description of the project or extension]
 
-Potřebuji napsat codeunit, který [popis funkce].
+I need to write a codeunit that [description of functionality].
 
-Kontext:
-- Relevantní tabulky: [seznam tabulek s popisem]
-- Workflow: [popis kdy a jak se codeunit volá]
-- Edge cases: [seznam výjimek nebo speciálních situací]
-- Existující vzor v projektu: [popis nebo příklad existujícího kódu]
+Context:
+- Relevant tables: [list of tables with descriptions]
+- Workflow: [description of when and how the codeunit is called]
+- Edge cases: [list of exceptions or special situations]
+- Existing pattern in the project: [description or example of existing code]
 
-Konvence:
+Conventions:
 - Naming prefix: [prefix]
-- Komentáře: [česky/anglicky]
-- Error handling: [Error() / TestField() / vlastní]
+- Comments: [Czech/English]
+- Error handling: [Error() / TestField() / custom]
 
-Napiš kompletní AL kód s komentáři.
+Write complete AL code with comments.
 ```
 
 ---
 
-## Šablona 2: Debug runtime chyby
+## Template 2: Debug Runtime Error
 
 ```
-Mám AL kód, který způsobuje tuto runtime chybu:
-[přesná chybová hláška]
+I have AL code that causes this runtime error:
+[exact error message]
 
-Kód kde k chybě dochází:
-[vlož relevantní kód]
+Code where the error occurs:
+[paste the relevant code]
 
-BC verze: [verze]
-Kontext: [kdy přesně k chybě dochází]
+BC version: [version]
+Context: [when exactly the error occurs]
 
-Analyzuj příčinu, navrhni opravu a vysvětli co ji způsobovalo.
-```
-
----
-
-## Šablona 3: Debug compile chyby
-
-```
-Dostávám tyto compile chyby při buildování AL extension:
-[vlož seznam chyb s čísly řádků]
-
-Relevantní kód:
-[vlož kód]
-
-BC verze: [verze]
-
-Oprav chyby a vysvětli každou opravu.
+Analyze the cause, suggest a fix, and explain what was causing it.
 ```
 
 ---
 
-## Šablona 4: Code review
+## Template 3: Debug Compile Error
 
 ```
-Proveď code review tohoto AL kódu:
-[vlož kód]
+I am getting these compile errors when building my AL extension:
+[paste list of errors with line numbers]
 
-Zaměř se na:
-1. Výkon – zbytečné DB dotazy, chybějící SetLoadFields
-2. Error handling – jsou pokryty edge cases?
-3. Bezpečnost – jsou správně kontrolována oprávnění?
-4. Maintainability – čitelnost, komentáře, naming
-5. BC best practices – konzistence s AL konvencemi v [verze]
+Relevant code:
+[paste code]
 
-Pro každý nalezený problém: Popis + navrhovaná oprava + příklad.
+BC version: [version]
+
+Fix the errors and explain each fix.
 ```
 
 ---
 
-## Šablona 5: Refactoring
+## Template 4: Code Review
 
 ```
-Tento AL kód funguje, ale [problém: je příliš dlouhý / duplicitní / obtížně čitelný].
+Perform a code review of this AL code:
+[paste code]
 
-Kód:
-[vlož kód]
+Focus on:
+1. Performance — unnecessary DB queries, missing SetLoadFields
+2. Error handling — are edge cases covered?
+3. Security — are permissions checked correctly?
+4. Maintainability — readability, comments, naming
+5. BC best practices — consistency with AL conventions in [version]
 
-Cíl refactoringu: [konkrétní cíl]
-Omezení: [co nemůžeš změnit – veřejné rozhraní, existující data]
-BC verze: [verze]
-
-Navrhni refactoring. Pro každou změnu: co měníš a proč.
-```
-
----
-
-## Šablona 6: Nová table extension
-
-```
-Potřebuji přidat pole do standardní BC tabulky [název tabulky] přes table extension.
-
-Pole:
-- [název pole] ([datový typ], [délka]): [popis účelu]
-
-Konvence:
-- Prefix polí: [prefix]
-- DataClassification: [CustomerContent / SystemMetadata / dle pravidel GDPR]
-- BC verze: [verze]
-
-Napiš table extension.
+For each issue found: Description + suggested fix + example.
 ```
 
 ---
 
-## Šablona 7: Event subscriber
+## Template 5: Refactoring
 
 ```
-Potřebuji event subscriber pro [název eventu] v [codeunit/table/page].
+This AL code works, but [problem: it's too long / duplicated / hard to read].
 
-Co má subscriber dělat: [popis]
-Relevantní tabulky nebo data: [seznam]
-Podmínky: [kdy má logika spustit]
+Code:
+[paste code]
 
-BC verze: [verze]
+Refactoring goal: [specific goal]
+Constraints: [what you cannot change — public interface, existing data]
+BC version: [version]
+
+Suggest a refactoring. For each change: what you're changing and why.
+```
+
+---
+
+## Template 6: New Table Extension
+
+```
+I need to add fields to the standard BC table [table name] via a table extension.
+
+Fields:
+- [field name] ([data type], [length]): [description of purpose]
+
+Conventions:
+- Field prefix: [prefix]
+- DataClassification: [CustomerContent / SystemMetadata / per GDPR rules]
+- BC version: [version]
+
+Write a table extension.
+```
+
+---
+
+## Template 7: Event Subscriber
+
+```
+I need an event subscriber for [event name] in [codeunit/table/page].
+
+What the subscriber should do: [description]
+Relevant tables or data: [list]
+Conditions: [when should the logic fire]
+
+BC version: [version]
 Naming prefix: [prefix]
 
-Napiš event subscriber s business logikou.
+Write an event subscriber with business logic.
 ```
 
 ---
 
-## Šablona 8: Analýza zákazníkova požadavku
+## Template 8: Analyze Customer Request
 
 ```
-Zákazník mi poslal tento požadavek pro BC:
-[vlož text emailu nebo popisu]
+A customer sent me this request for BC:
+[paste email text or description]
 
-Analyzuj a navrhni:
-1. Kompletní seznam věcí k implementaci
-2. Jaké BC objekty budu potřebovat
-3. Edge cases, které zákazník pravděpodobně nepřemýšlel
-4. Otázky pro zákazníka před implementací
+Analyze and suggest:
+1. Complete list of things to implement
+2. What BC objects will be needed
+3. Edge cases the customer probably didn't think about
+4. Questions for the customer before implementation
 
-BC verze: [verze]
-```
-
----
-
-## Šablona 9: Technická dokumentace kódu
-
-```
-Napiš technickou dokumentaci pro tento AL kód:
-[vlož kód]
-
-Dokumentace má obsahovat:
-- Účel a funkce
-- Popis vstupních parametrů a návratové hodnoty
-- Business logika krok za krokem
-- Known limitations a edge cases
-- Příklad použití
-
-Formát: Markdown. Jazyk: česky.
+BC version: [version]
 ```
 
 ---
 
-## Šablona 10: Generování testovacích dat
+## Template 9: Technical Code Documentation
 
 ```
-Potřebuji AL kód pro vytvoření testovacích dat:
-[popis testovacího scénáře]
+Write technical documentation for this AL code:
+[paste code]
 
-Potřebné záznamy:
-- [tabulka]: [počet, klíčové hodnoty]
+Documentation should include:
+- Purpose and functionality
+- Description of input parameters and return value
+- Business logic step by step
+- Known limitations and edge cases
+- Usage example
 
-Závislosti: [musí existovat Y před X]
-BC verze: [verze]
+Format: Markdown. Language: English.
+```
 
-Napiš procedure nebo codeunit pro vytvoření dat.
+---
+
+## Template 10: Generate Test Data
+
+```
+I need AL code to create test data:
+[description of the test scenario]
+
+Required records:
+- [table]: [count, key values]
+
+Dependencies: [Y must exist before X]
+BC version: [version]
+
+Write a procedure or codeunit to create the data.
 ```

@@ -23,5 +23,6 @@
     "allowDownloadingSource": true,
     "includeSourceInSymbolFile": true
   },
-  "runtime": "14.0"
+  "runtime": "14.0",
+  "allowedExternalUrls": ["https://*.openai.azure.com"]
 }

@@ -1,7 +1,9 @@
+namespace BCDemoAI;
+
 codeunit 50102 "Item AI Categorizer"
 {
-    // Automatická kategorizace položek pomocí Azure OpenAI
-    // Viz kapitola 27: Demo – Automatická kategorizace položek
+    // Automatic item categorization using Azure OpenAI
+    // See Chapter 27: Demo — Automatic Item Categorization
 
     procedure CategorizeAllItems()
     var
@@ -17,18 +19,18 @@ codeunit 50102 "Item AI Categorizer"
         CategoryList := GetCategoryList();
 
         if CategoryList = '' then
-            Error('Nejsou definovány žádné kategorie položek.');
+            Error('No item categories are defined.');
 
         Item.SetFilter("Item Category Code", '%1', '');
         Item.SetFilter(Description, '<>%1', '');
 
         if Item.IsEmpty() then begin
-            Message('Všechny položky jsou již zakategorizovány.');
+            Message('All items are already categorized.');
             exit;
         end;
 
         TotalItems := Item.Count();
-        ProgressDialog.Open('Kategorizace položek pomocí AI...\Zpracovávám: #1####\Hotovo: #2#### / #3####');
+        ProgressDialog.Open('Categorizing items with AI...\Processing: #1####\Done: #2#### / #3####');
 
         if Item.FindSet() then
             repeat
@@ -48,24 +50,24 @@ codeunit 50102 "Item AI Categorizer"
             until Item.Next() = 0;
 
         ProgressDialog.Close();
-        Message('Hotovo! Zpracováno %1 položek.', ProcessedCount);
+        Message('Done! Processed %1 items.', ProcessedCount);
     end;
 
     local procedure BuildCategorizationPrompt(ItemDescription: Text; CategoryList: Text): Text
     var
         PromptBuilder: TextBuilder;
     begin
-        PromptBuilder.Append('Jsi asistent pro kategorizaci skladových položek v Business Central.');
-        PromptBuilder.Append(' Tvůj úkol je přiřadit JEDNU kategorii k následující položce.');
-        PromptBuilder.Append(' Odpovídej POUZE kódem kategorie, nic jiného.');
+        PromptBuilder.Append('You are an assistant for categorizing inventory items in Business Central.');
+        PromptBuilder.Append(' Your task is to assign ONE category to the following item.');
+        PromptBuilder.Append(' Respond ONLY with the category code, nothing else.');
         PromptBuilder.AppendLine();
-        PromptBuilder.Append('Dostupné kategorie: ');
+        PromptBuilder.Append('Available categories: ');
         PromptBuilder.Append(CategoryList);
         PromptBuilder.AppendLine();
-        PromptBuilder.Append('Položka k zařazení: ');
+        PromptBuilder.Append('Item to categorize: ');
         PromptBuilder.Append(ItemDescription);
         PromptBuilder.AppendLine();
-        PromptBuilder.Append('Kategorie:');
+        PromptBuilder.Append('Category:');
         exit(PromptBuilder.ToText());
     end;
 

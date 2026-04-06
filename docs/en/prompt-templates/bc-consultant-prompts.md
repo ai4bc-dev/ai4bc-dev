@@ -1,312 +1,312 @@
-# Prompt šablony pro BC konzultanty
+# Prompt Templates for BC Consultants
 
-> Knihovna šablon pro každodenní konzultantskou práci s AI.
-> Zkopíruj, vyplň [závorky], pošli do Claude nebo ChatGPT.
-
----
-
-## Šablona 1: Funkční specifikace ze zákazníkových poznámek
-
-```
-Jsem BC konzultant. Zákazník mi popsal tento požadavek:
-[vlož zákazníkovy poznámky, email nebo zápis ze schůzky]
-
-Vytvoř funkční specifikaci:
-1. Záhlaví (název, zákazník, datum, verze – vyplň z dostupného kontextu nebo ponech jako placeholder)
-2. Aktuální stav (jak to v BC funguje dnes)
-3. Požadovaný stav (co se má změnit)
-4. Business pravidla (podmínky a logika)
-5. Edge cases a výjimky
-6. Dopad na ostatní části systému
-7. Otevřené otázky (co ještě potřebuji od zákazníka)
-
-Formát: Markdown. Jazyk: česky.
-```
+> A library of templates for everyday consulting work with AI.
+> Copy a template, fill in the [brackets], send it to Claude or ChatGPT.
 
 ---
 
-## Šablona 2: Testovací scénáře ze specifikace
+## Template 1: Functional Specification from Customer Notes
 
 ```
-Ze této funkční specifikace vygeneruj kompletní sadu testovacích scénářů:
-[vlož specifikaci]
+I am a BC consultant. The customer described this requirement:
+[paste customer's notes, email, or meeting minutes]
 
-Zahrnuj:
+Create a functional specification:
+1. Header (name, customer, date, version — fill from available context or leave as placeholder)
+2. Current state (how it works in BC today)
+3. Desired state (what should change)
+4. Business rules (conditions and logic)
+5. Edge cases and exceptions
+6. Impact on other parts of the system
+7. Open questions (what I still need from the customer)
+
+Format: Markdown. Language: English.
+```
+
+---
+
+## Template 2: Test Scenarios from Specification
+
+```
+From this functional specification, generate a complete set of test scenarios:
+[paste specification]
+
+Include:
 - Happy path
-- Alternativní validní průběhy
-- Chybové stavy
-- Edge cases (hraniční hodnoty)
+- Alternative valid flows
+- Error states
+- Edge cases (boundary values)
 
-Každý scénář:
-- ID: TS-[číslo]
-- Název: [popis]
-- Předpoklady: [co musí platit]
-- Kroky: [numbered]
-- Očekávaný výsledek: [co nastane]
+Each scenario:
+- ID: TS-[number]
+- Name: [description]
+- Preconditions: [what must be true]
+- Steps: [numbered]
+- Expected result: [what happens]
 ```
 
 ---
 
-## Šablona 2b: Iterace testovacích scénářů – zákazníkova specifika
+## Template 2b: Iterating Test Scenarios — Customer Specifics
 
 ```
-K těmto testovacím scénářům přidej scénáře pro tyto specifické situace zákazníka:
-[vlož stávající sadu scénářů]
+Add scenarios to these test scenarios for these specific customer situations:
+[paste existing set of scenarios]
 
-Zákazníkova specifika:
-- [specifická konfigurace nebo podmínka 1]
-- [specifická konfigurace nebo podmínka 2]
-- [specifická konfigurace nebo podmínka 3]
+Customer specifics:
+- [specific configuration or condition 1]
+- [specific configuration or condition 2]
+- [specific configuration or condition 3]
 
-Zachovej formát a ID schéma stávající sady.
-```
-
----
-
-## Šablona 2c: Export testovacích scénářů do CSV
-
-```
-Převeď tyto testovací scénáře do formátu vhodného pro Excel – CSV formát s oddělovačem středník.
-[vlož testovací scénáře]
-
-Sloupce: ID, Název, Modul, Předpoklady, Kroky (jeden řádek s číslováním), Očekávaný výsledek, Priorita
+Maintain the format and ID scheme of the existing set.
 ```
 
 ---
 
-## Šablona 3: Analýza zákazníkova požadavku
+## Template 2c: Export Test Scenarios to CSV
 
 ```
-Zákazník mi poslal tento požadavek:
-[vlož text]
+Convert these test scenarios to a format suitable for Excel — CSV format with semicolon delimiter.
+[paste test scenarios]
 
-Jako zkušený BC konzultant analyzuj:
-1. Co zákazník pravděpodobně chce (technicky)
-2. Implicitní předpoklady (co říká, ale neřekl)
-3. Otázky pro zákazníka před implementací
-4. Potenciální problémy s BC
-5. Odhadovaný rozsah změn
-
-BC verze: [verze]
+Columns: ID, Name, Module, Preconditions, Steps (one line with numbering), Expected Result, Priority
 ```
 
 ---
 
-## Šablona 3b: Příprava discovery workshopu
+## Template 3: Analyze Customer Request
 
 ```
-Zákazník chce provést discovery workshop na téma: [téma]
-Mám tyto informace o zákazníkovi a jeho prostředí: [co víš]
+The customer sent me this request:
+[paste text]
 
-Navrhni:
-1. Strukturu workshopu (agenda, časový plán)
-2. Klíčové otázky, které bych měl položit
-3. Oblasti, kde BC typicky naráží na problémy pro tento typ požadavku
-4. Dokumenty nebo data, která bych měl zákazníka poprosit přinést
-```
+As an experienced BC consultant, analyze:
+1. What the customer probably wants (technically)
+2. Implicit assumptions (what they mean but didn't say)
+3. Questions for the customer before implementation
+4. Potential problems with BC
+5. Estimated scope of changes
 
----
-
-## Šablona 3c: Zákazníkův požadavek jako user story
-
-```
-Zákazníkův požadavek byl: [text]
-Přeformuluj ho jako user story ve formátu:
-"Jako [role], chci [akce], abych [business hodnota]."
-Přidej Acceptance Criteria (min. 5 bodů).
+BC version: [version]
 ```
 
 ---
 
-## Šablona 4: Uživatelský návod
+## Template 3b: Preparing a Discovery Workshop
 
 ```
-Napiš uživatelský návod pro BC proces:
-[popis procesu]
+The customer wants to run a discovery workshop on the topic: [topic]
+I have this information about the customer and their environment: [what you know]
 
-Cílová skupina: [kdo to bude číst]
-BC verze: [verze]
-
-Formát:
-1. Úvod (k čemu slouží)
-2. Kdy použít
-3. Postup krok za krokem
-4. Časté chyby a řešení
-5. Poznámky a tipy
-
-Jazyk: jednoduchý, bez IT žargonu.
+Suggest:
+1. Workshop structure (agenda, time plan)
+2. Key questions I should ask
+3. Areas where BC typically encounters problems for this type of requirement
+4. Documents or data I should ask the customer to bring
 ```
 
 ---
 
-## Šablona 4b: Aktualizace existující dokumentace
+## Template 3c: Customer Request as User Story
 
 ```
-Toto je existující uživatelský návod:
-[vlož text]
-
-Zákazník přidal tuto změnu: [popis změny].
-
-Aktualizuj návod o tuto změnu tak, aby byl konzistentní se stávajícím textem a formátem.
+The customer's request was: [text]
+Rewrite it as a user story in the format:
+"As a [role], I want [action], so that [business value]."
+Add Acceptance Criteria (at least 5 points).
 ```
 
 ---
 
-## Šablona 4c: Release notes z git logu
+## Template 4: User Manual
 
 ```
-Toto jsou git commity za posledních [X] dní:
-[vlož git log výstup]
+Write a user manual for this BC process:
+[description of the process]
 
-Vytvoř release notes pro zákazníka v business jazyce.
-Formát:
-- Verze a datum
-- Nové funkce (popis pro uživatele, ne pro vývojáře)
-- Opravené chyby (pokud jsou relevantní pro uživatele)
-- Změny v nastavení (pokud jsou potřeba akce ze strany zákazníka)
+Target audience: [who will read it]
+BC version: [version]
 
-Zákazník není technický. Nevysvětluj jak věci fungují interně.
-```
+Format:
+1. Introduction (what it is for)
+2. When to use
+3. Step-by-step procedure
+4. Common errors and solutions
+5. Notes and tips
 
----
-
-## Šablona 5: Zápis ze schůzky
-
-```
-Napiš formální zápis ze schůzky z těchto poznámek:
-[vlož hrubé poznámky]
-
-Formát:
-1. Datum, účastníci, místo
-2. Program
-3. Projednané body
-4. Rozhodnutí
-5. Akční body (co, kdo, do kdy)
-6. Termín příští schůzky
-
-Tón: formální, česky.
+Language: simple, no IT jargon.
 ```
 
 ---
 
-## Šablona 6: Email zákazníkovi o problému nebo zpoždění
+## Template 4b: Updating Existing Documentation
 
 ```
-Napiš profesionální email zákazníkovi:
-Situace: [popis problému nebo zpoždění]
-Co chci sdělit: [klíčové body]
-Co nechci říct: [citlivá témata]
-Tón: [profesionální přátelský / formální]
-```
+This is the existing user manual:
+[paste text]
 
----
+The customer added this change: [description of change].
 
-## Šablona 6b: Odmítnutí mimo-scope požadavku
-
-```
-Zákazník požaduje: [co chce]
-Proč to nemůžeme dodat: [technický nebo business důvod]
-Co mu místo toho nabídneme: [alternativa]
-
-Napiš email, který odmítne požadavek profesionálně, vysvětlí proč, a nabídne alternativu. Zákazník nesmí mít pocit, že ho odmítáme, ale musí pochopit omezení.
+Update the manual to include this change, keeping it consistent with the existing text and format.
 ```
 
 ---
 
-## Šablona 6c: Týdenní status report
+## Template 4c: Release Notes from Git Log
 
 ```
-Napiš týdenní status report projektu pro zákazníka:
+These are the git commits for the last [X] days:
+[paste git log output]
 
-Projekt: [název]
-Stav: [% dokončení nebo fáze]
-Co bylo hotovo tento týden: [body]
-Co bude hotovo příští týden: [body]
-Rizika nebo problémy: [pokud jsou]
-Požadované rozhodnutí nebo informace od zákazníka: [pokud jsou]
+Create release notes for the customer in business language.
+Format:
+- Version and date
+- New features (described for users, not developers)
+- Fixed bugs (if relevant to users)
+- Configuration changes (if customer action is required)
 
-Formát: Krátký email, ne více než jedna stránka, přátelský tón.
-```
-
----
-
-## Šablona 7: Troubleshooting BC chyby
-
-```
-Zákazník dostává tuto BC chybu:
-[přesný text chyby]
-
-BC verze: [verze]
-Kdy nastává: [popis akce]
-Relevantní konfigurace: [pokud víš]
-
-Analyzuj příčiny (seřaď od nejpravděpodobnější) a navrhni postup diagnostiky.
+The customer is non-technical. Do not explain how things work internally.
 ```
 
 ---
 
-## Šablona 7b: Troubleshooting s kontextem customizace
+## Template 5: Meeting Minutes
 
 ```
-Zákazník má tyto nestandardní konfigurace:
-- [customizace nebo extension]
-- [specifické nastavení]
+Write formal meeting minutes from these notes:
+[paste rough notes]
 
-Při [akce] dochází k tomuto chování: [popis].
+Format:
+1. Date, attendees, location
+2. Agenda
+3. Discussion points
+4. Decisions
+5. Action items (what, who, by when)
+6. Next meeting date
 
-Které části systému by to mohlo způsobovat? Jak bych postupoval při diagnostice?
-```
-
----
-
-## Šablona 7c: Diagnostické instrukce pro zákazníka
-
-```
-Zákazník popisuje tento problém: [popis].
-Zákazník není technický.
-
-Navrhni kroky, které mu můžu dát jako instrukce pro základní diagnostiku.
-Kroky musí být jednoduché a popsané v neIT jazyce.
+Tone: formal, professional.
 ```
 
 ---
 
-## Šablona 8: SQL dotaz pro BC data
+## Template 6: Email to Customer about a Problem or Delay
 
 ```
-Potřebuji SQL dotaz pro BC databázi:
-[popis co chci zjistit]
-
-BC verze: [verze]
-Podmínky: [filtry, časové rozsahy]
-
-Napiš SELECT dotaz s vysvětlením použitých tabulek a jejich vztahů.
+Write a professional email to the customer:
+Situation: [description of problem or delay]
+What I want to communicate: [key points]
+What I don't want to say: [sensitive topics]
+Tone: [professional friendly / formal]
 ```
 
 ---
 
-## Šablona 8b: Optimalizace pomalého SQL dotazu
+## Template 6b: Declining an Out-of-Scope Request
 
 ```
-Tento SQL dotaz na BC databázi je pomalý (běží [X]+ sekund):
-[vlož dotaz]
+The customer requests: [what they want]
+Why we cannot deliver it: [technical or business reason]
+What we offer instead: [alternative]
 
-BC verze: [verze], odhadovaný počet záznamů v hlavní tabulce: [odhad]
-
-Analyzuj proč je pomalý a navrhni optimalizaci. Vysvětli každou změnu.
+Write an email that declines the request professionally, explains why, and offers an alternative. The customer should not feel rejected, but must understand the limitations.
 ```
 
 ---
 
-## Šablona 8c: Diagnostika datových anomálií
+## Template 6c: Weekly Status Report
 
 ```
-Zákazník hlásí: [popis nesouladu nebo anomálie v datech].
+Write a weekly project status report for the customer:
 
-Navrhni SQL dotazy pro diagnostiku:
-1. [oblast 1 k ověření]
-2. [oblast 2 k ověření]
-3. [oblast 3 k ověření]
+Project: [name]
+Status: [% complete or phase]
+Completed this week: [items]
+Planned for next week: [items]
+Risks or issues: [if any]
+Required decisions or information from customer: [if any]
 
-BC verze: [verze]
+Format: Short email, no more than one page, friendly tone.
+```
+
+---
+
+## Template 7: Troubleshooting a BC Error
+
+```
+The customer is getting this BC error:
+[exact error text]
+
+BC version: [version]
+When it occurs: [description of action]
+Relevant configuration: [if known]
+
+Analyze the causes (sorted from most probable) and suggest a diagnostic procedure.
+```
+
+---
+
+## Template 7b: Troubleshooting with Customization Context
+
+```
+The customer has these non-standard configurations:
+- [customization or extension]
+- [specific setting]
+
+When [action] this behavior occurs: [description].
+
+Which parts of the system could be causing this? How would I proceed with diagnostics?
+```
+
+---
+
+## Template 7c: Diagnostic Instructions for the Customer
+
+```
+The customer describes this problem: [description].
+The customer is non-technical.
+
+Suggest steps I can give them as instructions for basic diagnostics.
+Steps must be simple and described in non-IT language.
+```
+
+---
+
+## Template 8: SQL Query for BC Data
+
+```
+I need a SQL query for a BC database:
+[description of what I want to find out]
+
+BC version: [version]
+Conditions: [filters, time ranges]
+
+Write a SELECT query with an explanation of the tables used and their relationships.
+```
+
+---
+
+## Template 8b: Optimizing a Slow SQL Query
+
+```
+This SQL query on a BC database is slow (takes [X]+ seconds):
+[paste query]
+
+BC version: [version], estimated number of records in the main table: [estimate]
+
+Analyze why it is slow and suggest optimizations. Explain each change.
+```
+
+---
+
+## Template 8c: Diagnosing Data Anomalies
+
+```
+The customer reports: [description of data inconsistency or anomaly].
+
+Suggest SQL queries for diagnostics:
+1. [area 1 to verify]
+2. [area 2 to verify]
+3. [area 3 to verify]
+
+BC version: [version]
 ```

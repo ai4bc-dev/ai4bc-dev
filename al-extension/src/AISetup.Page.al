@@ -1,8 +1,10 @@
+namespace BCDemoAI;
+
 page 50101 "AI Categorization Setup"
 {
     PageType = Card;
     SourceTable = "AI Categorization Setup";
-    Caption = 'Nastavení AI kategorizace';
+    Caption = 'AI Categorization Setup';
     ApplicationArea = All;
     UsageCategory = Administration;
     InsertAllowed = false;
@@ -19,12 +21,12 @@ page 50101 "AI Categorization Setup"
                 field("Endpoint URL"; Rec."Endpoint URL")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'URL vašeho Azure OpenAI resource, např. https://moje-ai.openai.azure.com/';
+                    ToolTip = 'URL of your Azure OpenAI resource, e.g. https://my-ai.openai.azure.com/';
                 }
                 field("Deployment Name"; Rec."Deployment Name")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Název modelu deployment v Azure, např. gpt4o-mini-v1';
+                    ToolTip = 'Model deployment name in Azure, e.g. gpt4o-mini-v1';
                 }
                 field("API Version"; Rec."API Version")
                 {
@@ -33,14 +35,14 @@ page 50101 "AI Categorization Setup"
                 field(ApiKeyStatus; ApiKeyStatusTxt)
                 {
                     ApplicationArea = All;
-                    Caption = 'API klíč';
+                    Caption = 'API Key';
                     Editable = false;
                     StyleExpr = ApiKeyStyle;
                 }
             }
             group(Parameters)
             {
-                Caption = 'Parametry AI';
+                Caption = 'AI Parameters';
 
                 field("Max Tokens"; Rec."Max Tokens")
                 {
@@ -49,6 +51,16 @@ page 50101 "AI Categorization Setup"
                 field(Temperature; Rec.Temperature)
                 {
                     ApplicationArea = All;
+                }
+                field("Batch Size"; Rec."Batch Size")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Number of items to process in a single batch.';
+                }
+                field("Delay Between Calls Ms"; Rec."Delay Between Calls Ms")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Delay in milliseconds between API calls to avoid rate limiting.';
                 }
             }
         }
@@ -60,7 +72,7 @@ page 50101 "AI Categorization Setup"
         {
             action(SetApiKey)
             {
-                Caption = 'Nastavit API klíč';
+                Caption = 'Set API Key';
                 Image = EncryptionKeys;
                 ApplicationArea = All;
 
@@ -69,7 +81,7 @@ page 50101 "AI Categorization Setup"
                     KeyMgr: Codeunit "AI Key Manager";
                     ApiKeyInput: Text;
                 begin
-                    // V produkci: použijte dedikovanou stránku pro vstup klíče
+                    // In production: use a dedicated page for key input
                     ApiKeyInput := '';
                     if ApiKeyInput <> '' then begin
                         KeyMgr.StoreApiKey(ApiKeyInput);
@@ -80,7 +92,7 @@ page 50101 "AI Categorization Setup"
             }
             action(TestConnection)
             {
-                Caption = 'Otestovat spojení';
+                Caption = 'Test Connection';
                 Image = TestReport;
                 ApplicationArea = All;
 
@@ -89,8 +101,8 @@ page 50101 "AI Categorization Setup"
                     OpenAIHelper: Codeunit "OpenAI Helper";
                     Response: Text;
                 begin
-                    Response := OpenAIHelper.CallChatCompletionSimple('Řekni "OK".');
-                    Message('Spojení funguje. AI odpověděla: %1', Response);
+                    Response := OpenAIHelper.CallChatCompletionSimple('Say "OK".');
+                    Message('Connection works. AI responded: %1', Response);
                 end;
             }
         }
@@ -111,10 +123,10 @@ page 50101 "AI Categorization Setup"
         KeyMgr: Codeunit "AI Key Manager";
     begin
         if KeyMgr.HasApiKey() then begin
-            ApiKeyStatusTxt := 'Nastaven';
+            ApiKeyStatusTxt := 'Configured';
             ApiKeyStyle := 'Favorable';
         end else begin
-            ApiKeyStatusTxt := 'Není nastaven';
+            ApiKeyStatusTxt := 'Not configured';
             ApiKeyStyle := 'Unfavorable';
         end;
     end;

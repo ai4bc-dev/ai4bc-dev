@@ -1,7 +1,9 @@
+namespace BCDemoAI;
+
 codeunit 50111 "AI Item Search Helper"
 {
-    // AI vyhledávání v přirozeném jazyce
-    // Viz kapitola 28: Demo – AI-powered vyhledávání v BC
+    // AI natural language search
+    // See Chapter 28: Demo — AI-powered Search in BC
 
     procedure ExtractSearchParameters(NaturalLanguageQuery: Text): JsonObject
     var
@@ -10,17 +12,17 @@ codeunit 50111 "AI Item Search Helper"
         AIResponse: Text;
         ResultJson: JsonObject;
     begin
-        SystemPrompt := 'Jsi asistent pro vyhledávání v skladovém systému Business Central. ' +
-            'Uživatel popíše co hledá, ty extrahuješ klíčová slova a parametry. ' +
-            'Vždy odpovídej POUZE validním JSON objektem v tomto formátu: ' +
-            '{"keywords": ["slovo1", "slovo2"], "category_hint": "nazev_kategorie_nebo_null", ' +
-            '"description_filter": "klicove_slovo_pro_LIKE_filtr"}.';
+        SystemPrompt := 'You are an assistant for searching in the Business Central inventory system. ' +
+            'The user describes what they are looking for, and you extract keywords and parameters. ' +
+            'Always respond ONLY with a valid JSON object in this format: ' +
+            '{"keywords": ["word1", "word2"], "category_hint": "category_name_or_null", ' +
+            '"description_filter": "keyword_for_LIKE_filter"}.';
 
         AIResponse := OpenAIHelper.CallChatCompletion(
             SystemPrompt, NaturalLanguageQuery, 200);
 
         if not ResultJson.ReadFrom(AIResponse) then begin
-            // Fallback: pokud AI nevrátila validní JSON, použijeme přímé vyhledávání
+            // Fallback: if AI didn't return valid JSON, use direct search
             ResultJson.Add('description_filter', NaturalLanguageQuery);
         end;
 

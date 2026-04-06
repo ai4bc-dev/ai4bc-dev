@@ -1,19 +1,21 @@
-// Enum pro stavy schvalovacího procesu
-// Kurz "AI pro BC vývojáře" – Modul 1 Workshop
-enum 50100 "ZZ Approval Status"
+namespace BCDemoAI;
+
+// Enum for approval process statuses
+// Course "AI for BC Developers" — Module 1 Workshop
+enum 50200 "ZZ Approval Status"
 {
     Extensible = true;
 
     value(0; Pending)
     {
-        Caption = 'Čeká na schválení';
+        Caption = 'Pending Approval';
     }
     value(1; Approved)
     {
-        Caption = 'Schváleno';
+        Caption = 'Approved';
     }
     value(2; Rejected)
     {
-        Caption = 'Zamítnuto';
+        Caption = 'Rejected';
     }
 }

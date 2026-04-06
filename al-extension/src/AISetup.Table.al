@@ -1,13 +1,15 @@
+namespace BCDemoAI;
+
 table 50101 "AI Categorization Setup"
 {
-    Caption = 'Nastavení AI kategorizace';
+    Caption = 'AI Categorization Setup';
     DataClassification = SystemMetadata;
 
     fields
     {
         field(1; "Primary Key"; Code[10])
         {
-            Caption = 'Primární klíč';
+            Caption = 'Primary Key';
             DataClassification = SystemMetadata;
         }
         field(10; "Endpoint URL"; Text[250])
@@ -18,23 +20,23 @@ table 50101 "AI Categorization Setup"
             trigger OnValidate()
             begin
                 if ("Endpoint URL" <> '') and (not "Endpoint URL".StartsWith('https://')) then
-                    Error('Endpoint URL musí začínat https://');
+                    Error('Endpoint URL must start with https://');
             end;
         }
         field(20; "Deployment Name"; Text[100])
         {
-            Caption = 'Název deployment modelu';
+            Caption = 'Model Deployment Name';
             DataClassification = SystemMetadata;
         }
         field(30; "API Version"; Text[50])
         {
-            Caption = 'Verze API';
+            Caption = 'API Version';
             DataClassification = SystemMetadata;
             InitValue = '2025-01-01-preview';
         }
         field(40; "Max Tokens"; Integer)
         {
-            Caption = 'Maximální počet tokenů odpovědi';
+            Caption = 'Max Response Tokens';
             DataClassification = SystemMetadata;
             InitValue = 100;
             MinValue = 10;
@@ -47,6 +49,22 @@ table 50101 "AI Categorization Setup"
             InitValue = 0.1;
             MinValue = 0;
             MaxValue = 2;
+        }
+        field(60; "Batch Size"; Integer)
+        {
+            Caption = 'Batch Size';
+            DataClassification = SystemMetadata;
+            InitValue = 10;
+            MinValue = 1;
+            MaxValue = 100;
+        }
+        field(70; "Delay Between Calls Ms"; Integer)
+        {
+            Caption = 'Delay Between Calls (ms)';
+            DataClassification = SystemMetadata;
+            InitValue = 500;
+            MinValue = 0;
+            MaxValue = 10000;
         }
     }
 

@@ -1,7 +1,9 @@
+namespace BCDemoAI;
+
 codeunit 50130 "AI Key Manager"
 {
-    // Bezpečné ukládání API klíčů přes BC Isolated Storage
-    // Viz kapitola 32: Bezpečnost, GDPR a etika
+    // Secure API key storage via BC Isolated Storage
+    // See Chapter 32: Security, GDPR and Ethics
 
     procedure StoreApiKey(ApiKey: Text)
     begin
@@ -13,7 +15,7 @@ codeunit 50130 "AI Key Manager"
         ApiKey: Text;
     begin
         if not IsolatedStorage.Get('AzureOpenAIKey', DataScope::Company, ApiKey) then
-            Error('API klíč není nastaven. Nastavte ho na stránce Nastavení AI kategorizace.');
+            Error('API key is not set. Configure it on the AI Categorization Setup page.');
         exit(ApiKey);
     end;
 
